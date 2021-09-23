@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    text-align: center;
+}
+
+.container{
+    max-width: 90vw;
+    margin: auto;
+    
+}
+
+.header {
+    background-color: purple;
+    margin-top: 0;
+    padding: 0.5rem;
+  
+    border-radius: 0 0 1rem 1rem;
+}
+
+.header h1 {
+    font-weight: bolder;
+    margin: 0;
+}
+
+
+
+input, button{
+    display: block;
+    margin:1rem auto;
+    max-width: 90vw;
+
+}
+
+input {
+    width: 30vw;
+    height: 2rem;
+    border-radius: 0.5rem;
+}
+
+button {
+    padding: 0.2rem 2rem;
+    font-size: large;
+    font-weight: bold;
+    border-radius: 0.4rem;
+    border-color: purple;
+    color: purple;
+    
+}
+
+table {
+    margin: auto;
+    border: solid 5px purple;
+    max-width: 90vw;
+    border-radius: 1rem;
+    border-spacing: 0;
+}
+th,
+td{
+    width: 3rem;
+    border: solid 1px purple;
+    padding: 0.5rem ;
+    font-weight: bold;
+
+}
+
+footer{
+    /* background-color: purple; */
+    margin:5rem auto 0;
+    max-width: 90vw;
+    padding: 1rem;
+    padding-top: 0.5rem;
+    border-radius: 1rem 1rem 0 0;
+    color: black;
+}
+.footer h3 {
+    margin-top: 0rem;
+}
+
+.container-footer-links {
+    padding: 0.5rem;
+}
+
+.container-footer-links a {
+    padding: 1rem 1rem;
+}
+
+.icons{
+    max-width: 40px;
+}
