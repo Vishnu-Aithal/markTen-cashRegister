@@ -54,14 +54,14 @@ button {
 table {
     margin: auto;
     border: solid 5px purple;
-    max-width: 90vw;
+    max-width: 80%;
     border-radius: 1rem;
     border-spacing: 0;
 }
 
 th,
 td {
-    width: 3rem;
+    width: 1rem;
     border: solid 1px purple;
     padding: 0.5rem;
     font-weight: bold;
@@ -69,7 +69,6 @@ td {
 }
 
 footer {
-    /* background-color: purple; */
     margin: 5rem auto 0;
     max-width: 90vw;
     padding: 1rem;
