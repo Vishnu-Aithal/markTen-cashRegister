@@ -14,9 +14,9 @@
     <div class="container middle-container">
         <h3>Enter the bill amount and cash given by the customer and know minimum number of notes to return.</h3>
         <h4>Bill Amount:</h4>
-        <input class="bill" type="number" min="0" step="1"  oninput="(validity.valid)||(value='')">
+        <input class="bill" type="number" step="1" min="1" oninput="(validity.valid)||(value='')">
         <h4 class="after-bill">Cash Given:</h4>
-        <input class="cash after-bill" type="number" min="0" step="1" oninput="(validity.valid)||(value='')">
+        <input class="cash after-bill" type="number" step="1" min="1" oninput="(validity.valid)||(value='')">
         <button id="next-btn">Next</button>
         <button id="check-btn" class="after-bill">Check</button>
         <button id="reset-btn">Reset</button>
