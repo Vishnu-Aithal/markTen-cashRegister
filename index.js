@@ -4,7 +4,7 @@ var checkBtn = document.querySelector("#check-btn");
 var nextBtn = document.querySelector("#next-btn");
 var resetBtn = document.querySelector("#reset-btn");
 var messageText = document.querySelector(".message")
-var notes = [2000, 500, 100, 20, 10, 5, 1];
+var notes = [2000, 500, 200, 100, 50, 20, 10, 5, 1];
 
 function showCashInput() {
     if (billInput.value != "") {
