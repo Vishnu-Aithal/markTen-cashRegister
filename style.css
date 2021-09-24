@@ -1,9 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
+:root{
+    --primary-color: #222831;
+    --secondary-color: #00ADB5;
+    --svg-secondary-filter: invert(51%) sepia(67%) saturate(2685%) hue-rotate(147deg) brightness(93%) contrast(101%);
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     text-align: center;
+}
+
+.svg{
+    filter: var(--svg-secondary-filter);
 }
 
 .container {
@@ -13,7 +23,7 @@ body {
 }
 
 .header {
-    background-color: purple;
+    background-color: var(--primary-color);
     margin-top: 0;
     padding: 0.5rem;
 
@@ -23,6 +33,7 @@ body {
 .header h1 {
     font-weight: bolder;
     margin: 0;
+    color: var(--secondary-color);
 }
 
 
@@ -39,6 +50,7 @@ input {
     width: 30vw;
     height: 2rem;
     border-radius: 0.5rem;
+    border-color: var(--secondary-color);
 }
 
 button {
@@ -46,14 +58,15 @@ button {
     font-size: large;
     font-weight: bold;
     border-radius: 0.4rem;
-    border-color: purple;
-    color: purple;
+    border-color: var(--primary-color);
+    color: black;
+    background-color: var(--secondary-color);
 
 }
 
 table {
     margin: auto;
-    border: solid 2px purple;
+    border: solid 4px var(--primary-color);
     width: 50vw;
     max-width: 90vw;
     border-spacing: 0;
@@ -61,7 +74,7 @@ table {
 
 th,
 td {
-    border: solid 1px purple;
+    border: solid 1px var(--secondary-color);
     font-weight: bold;
     padding:0.2rem;
     width:0%;
