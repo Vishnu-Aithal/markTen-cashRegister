@@ -54,7 +54,7 @@ button {
 table {
     margin: auto;
     border: solid 5px purple;
-    max-width: 80%;
+    width:50%;
     border-radius: 1rem;
     border-spacing: 0;
 }
