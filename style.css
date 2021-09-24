@@ -53,9 +53,9 @@ button {
 
 table {
     margin: auto;
-    border: solid 5px purple;
-    max-width: 80vw;
-    border-radius: 1rem;
+    border: solid 2px purple;
+    width: 50vw;
+    max-width: 90vw;
     border-spacing: 0;
 }
 
@@ -63,7 +63,8 @@ th,
 td {
     border: solid 1px purple;
     font-weight: bold;
-    padding: 0.5rem;
+    padding:0.2rem;
+    width:0%;
 }
 
 footer {
