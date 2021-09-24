@@ -14,10 +14,12 @@
     <div class="container middle-container">
         <h3>Enter the bill amount and cash given by the customer and know minimum number of notes to return.</h3>
         <h4>Bill Amount:</h4>
-        <input class="bill" type="number" min="0" step="1" oninput="(validity.valid)||(value='')">
-        <h4>Cash Given:</h4>
-        <input class="cash" type="number" min="0" step="1" oninput="(validity.valid)||(value='')">
-        <button>Check</button>
+        <input class="bill" type="number" min="0" step="1"  oninput="(validity.valid)||(value='')">
+        <h4 class="after-bill">Cash Given:</h4>
+        <input class="cash after-bill" type="number" min="0" step="1" oninput="(validity.valid)||(value='')">
+        <button id="next-btn">Next</button>
+        <button id="check-btn" class="after-bill">Check</button>
+        <button id="reset-btn">Reset</button>
         <h3 class="message">message</h3>
     </div>
     <div class="container table">
@@ -25,15 +27,15 @@
             <tbody>
             <tr>
                 <th>No. of notes</th>
-                <td class="2000-notes"></td>
-                <td class="500-notes"></td>
-                <td class="200-notes"></td>
-                <td class="100-notes"></td>
-                <td class="50-notes"></td>
-                <td class="20-notes"></td>
-                <td class="10-notes"></td>
-                <td class="5-notes"></td>
-                <td class="1-notes"></td>
+                <td class="notes"></td>
+                <td class="notes"></td>
+                <td class="notes"></td>
+                <td class="notes"></td>
+                <td class="notes"></td>
+                <td class="notes"></td>
+                <td class="notes"></td>
+                <td class="notes"></td>
+                <td class="notes"></td>
             </tr>
             <tr>
                 <th>Note</th>
@@ -51,12 +53,14 @@
         </table>
     </div>
 
+    
+
     <footer class="footer">
         <h3 class="footer-heading">Vishnu Aithal</h3>
         <div class="container-footer-links">
-        <a target="_blank" href="https://github.com/Vishnu-Aithal" class="links github"><img src="/icons/github.png" alt="" class="icons"></a>
-        <a target="_blank" href="https://twitter.com/Vishnu_Aithal" class="links twitter"><img src="/icons/twitter.png" alt="" class="icons"></a>
-        <a target="_blank" href="" class="links linkedin"><img src="/icons/linkedin.png" alt="" class="icons"></a>
+        <a target="_blank" href="https://github.com/Vishnu-Aithal" class="links github"></a>
+        <a target="_blank" href="https://twitter.com/Vishnu_Aithal" class="links twitter"></a>
+        <a target="_blank" href="" class="links linkedin"></a>
         </div>
     </footer>
     <script src="index.js"></script>

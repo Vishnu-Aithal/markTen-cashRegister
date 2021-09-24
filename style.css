@@ -1,21 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     text-align: center;
 }
 
-.container{
+.container {
     max-width: 90vw;
     margin: auto;
-    
+
 }
 
 .header {
     background-color: purple;
     margin-top: 0;
     padding: 0.5rem;
-  
+
     border-radius: 0 0 1rem 1rem;
 }
 
@@ -26,9 +27,10 @@ body {
 
 
 
-input, button{
+input,
+button {
     display: block;
-    margin:1rem auto;
+    margin: 1rem auto;
     max-width: 90vw;
 
 }
@@ -46,7 +48,7 @@ button {
     border-radius: 0.4rem;
     border-color: purple;
     color: purple;
-    
+
 }
 
 table {
@@ -56,24 +58,26 @@ table {
     border-radius: 1rem;
     border-spacing: 0;
 }
+
 th,
-td{
+td {
     width: 3rem;
     border: solid 1px purple;
-    padding: 0.5rem ;
+    padding: 0.5rem;
     font-weight: bold;
 
 }
 
-footer{
+footer {
     /* background-color: purple; */
-    margin:5rem auto 0;
+    margin: 5rem auto 0;
     max-width: 90vw;
     padding: 1rem;
     padding-top: 0.5rem;
     border-radius: 1rem 1rem 0 0;
     color: black;
 }
+
 .footer h3 {
     margin-top: 0rem;
 }
@@ -86,6 +90,13 @@ footer{
     padding: 1rem 1rem;
 }
 
-.icons{
+.icons {
     max-width: 40px;
+}
+
+.after-bill,
+.message,
+#reset-btn,
+table {
+    display: none;
 }
