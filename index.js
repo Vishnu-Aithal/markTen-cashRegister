@@ -6,17 +6,36 @@ var resetBtn = document.querySelector("#reset-btn");
 var messageText = document.querySelector(".message")
 var notes = [2000, 500, 200, 100, 50, 20, 10, 5, 1];
 
+billInput.oninput = (event)=>{
+    if ((event.target.validity.valid) & (event.target.value!="")) {
+        nextBtn.removeAttribute("disabled")
+        
+    } else{
+        event.target.value = "";
+        nextBtn.setAttribute("disabled","")
+        checkBtn.setAttribute("disabled", "")
+    }
+
+    }
+
+    cashInput.oninput = (event)=>{
+        if ((event.target.validity.valid) & (event.target.value!="")) {
+            checkBtn.removeAttribute("disabled")
+            
+        } else{
+            event.target.value = "";
+            checkBtn.setAttribute("disabled", "")
+        }
+    
+        }    
+
 function showCashInput() {
-    if (billInput.value != "") {
-        messageText.style.display = "none"
-        billInput.setAttribute("disabled", "");
-        nextBtn.style.display = "none"
+
+        messageText.style.display = "none";
+        nextBtn.style.display = "none";
         document.querySelectorAll(".after-bill").forEach((element) => element.style.display = "block");
         cashInput.focus();
-    } else {
-        messageText.style.display = "block"
-        messageText.innerText = "Bill Amount cannot be empty"
-    }
+
 }
 
     function amountValid(bill, cash) {
