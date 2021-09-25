@@ -9,22 +9,26 @@ var notes = [2000, 500, 200, 100, 50, 20, 10, 5, 1];
 billInput.oninput = (event) => {
     if ((event.target.validity.valid) & (event.target.value != "")) {
         nextBtn.removeAttribute("disabled");
-        checkBtn.removeAttribute("disabled");
-        messageText.style.display="none";
+        if (cashInput.value != "") {
+            checkBtn.removeAttribute("disabled");
+        }
+        messageText.style.display = "none";
 
     } else {
         event.target.value = "";
         nextBtn.setAttribute("disabled", "");
         checkBtn.setAttribute("disabled", "");
-        
+
     }
 
 }
 
 cashInput.oninput = (event) => {
     if ((event.target.validity.valid) & (event.target.value != "")) {
-        checkBtn.removeAttribute("disabled");
-        messageText.style.display="none";
+        if (billInput.value != "") {
+            checkBtn.removeAttribute("disabled");
+        }
+        messageText.style.display = "none";
 
     } else {
         event.target.value = "";
@@ -88,6 +92,8 @@ function clickHandler() {
 }
 
 function resetRegister() {
+    nextBtn.setAttribute("disabled", "");
+    checkBtn.setAttribute("disabled", "");
     billInput.value = "";
     cashInput.value = "";
     billInput.removeAttribute("disabled");
