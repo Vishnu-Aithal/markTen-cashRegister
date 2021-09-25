@@ -10,11 +10,13 @@ billInput.oninput = (event) => {
     if ((event.target.validity.valid) & (event.target.value != "")) {
         nextBtn.removeAttribute("disabled");
         checkBtn.removeAttribute("disabled");
+        messageText.style.display="none";
 
     } else {
         event.target.value = "";
         nextBtn.setAttribute("disabled", "");
         checkBtn.setAttribute("disabled", "");
+        
     }
 
 }
@@ -22,6 +24,7 @@ billInput.oninput = (event) => {
 cashInput.oninput = (event) => {
     if ((event.target.validity.valid) & (event.target.value != "")) {
         checkBtn.removeAttribute("disabled");
+        messageText.style.display="none";
 
     } else {
         event.target.value = "";
