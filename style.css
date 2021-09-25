@@ -64,6 +64,10 @@ button {
 
 }
 
+button:disabled{
+    background-color: white;
+}
+
 table {
     margin: auto;
     border: solid 4px var(--primary-color);
