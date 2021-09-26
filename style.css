@@ -71,7 +71,7 @@ button:disabled{
 table {
     margin: auto;
     border: solid 4px var(--primary-color);
-    width: 50vw;
+    width: 70vw;
     max-width: 90vw;
     border-spacing: 0;
 }

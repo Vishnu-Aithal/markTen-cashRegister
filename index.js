@@ -73,11 +73,12 @@ function clickHandler() {
     cashAmount = parseInt(cashInput.value);
     if (amountValid(billAmount, cashAmount)) {
         messageText.style.display = "block";
-        messageText.innerText = "Return Change";
+        // messageText.innerText = "Return Change";
         cashInput.setAttribute("disabled", "");
         billInput.setAttribute("disabled", "");
         checkBtn.style.display = "none";
         var changeAmount = cashAmount - billAmount
+        messageText.innerText = `Return Change = ${changeAmount}`;
         var requiredNotes = calculateNotes(changeAmount);
         showTable(requiredNotes)
         resetBtn.style.display = "block"
