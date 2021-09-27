@@ -7,32 +7,35 @@ var messageText = document.querySelector(".message")
 var notes = [2000, 500, 200, 100, 50, 20, 10, 5, 1];
 
 billInput.oninput = (event) => {
-    if ((event.target.validity.valid) & (event.target.value != "")) {
-        nextBtn.removeAttribute("disabled");
-        if (cashInput.value != "") {
+    if (event.target.validity.valid) {
+        event.target.previousValidInput = event.target.value;
+        ((billInput.value!="") ? nextBtn.removeAttribute("disabled"):nextBtn.setAttribute("disabled", ""));
+
+        if ((cashInput.value) != "" & (event.target.value != "")) {
             checkBtn.removeAttribute("disabled");
-        }
+        } else { checkBtn.setAttribute("disabled", ""); }
         messageText.style.display = "none";
 
     } else {
-        event.target.value = "";
-        nextBtn.setAttribute("disabled", "");
-        checkBtn.setAttribute("disabled", "");
+        event.target.value = event.target.previousValidInput;
+        // nextBtn.setAttribute("disabled", "");
+        // checkBtn.setAttribute("disabled", "");
 
     }
 
 }
 
 cashInput.oninput = (event) => {
-    if ((event.target.validity.valid) & (event.target.value != "")) {
-        if (billInput.value != "") {
+    if (event.target.validity.valid) {
+        event.target.previousValidInput = event.target.value;
+        if ((billInput.value != "") & (event.target.value != "")) {
             checkBtn.removeAttribute("disabled");
-        }
+        } else { checkBtn.setAttribute("disabled", ""); }
         messageText.style.display = "none";
 
     } else {
-        event.target.value = "";
-        checkBtn.setAttribute("disabled", "");
+        event.target.value = event.target.previousValidInput;
+        // checkBtn.setAttribute("disabled", "");
     }
 
 }
@@ -97,6 +100,8 @@ function resetRegister() {
     checkBtn.setAttribute("disabled", "");
     billInput.value = "";
     cashInput.value = "";
+    billInput.previousValidInput = "";
+    cashInput.previousValidInput = "";
     billInput.removeAttribute("disabled");
     cashInput.removeAttribute("disabled");
     nextBtn.style.display = "block";
