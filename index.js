@@ -67,7 +67,8 @@ function showTable(notesToDisplay) {
     document.querySelector("table").style.display = "inline-table";
 
     document.querySelectorAll(".notes").forEach((element, index) => {
-        element.innerText = notesToDisplay[index];
+        (notesToDisplay[index] != 0 ? element.innerText = notesToDisplay[index]:NaN )
+        // element.innerText = notesToDisplay[index];
     })
 }
 
@@ -109,6 +110,7 @@ function resetRegister() {
     resetBtn.style.display = "none";
     messageText.style.display = "none"
     document.querySelector("table").style.display = "none"
+    document.querySelectorAll(".notes").forEach((note)=>note.innerText="");
     document.querySelectorAll(".after-bill").forEach((element) => element.style.display = "none");
     billInput.focus();
 
