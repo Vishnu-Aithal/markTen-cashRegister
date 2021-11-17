@@ -67,6 +67,7 @@ button {
 button:enabled:hover{
     border-color: var(--secondary-color);
     cursor: pointer;
+    transition: ease 0.2s;
 }
 
 button:disabled{
