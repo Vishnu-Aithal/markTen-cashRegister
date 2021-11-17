@@ -61,7 +61,12 @@ button {
     border-color: var(--primary-color);
     color: black;
     background-color: var(--secondary-color);
+    transition: ease 0.2s;
+}
 
+button:enabled:hover{
+    border-color: var(--secondary-color);
+    cursor: pointer;
 }
 
 button:disabled{
